@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#832323"
+    android:backgroundTintMode="screen"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_back_arrow_intensive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#3787AD"
+        android:backgroundTintMode="src_in"
+        android:text="← Назад"
+        android:textColor="#5F7A87"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_intensive_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Интенсивные тренировки"
+        android:textColor="#607B88"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="511dp"
+        android:layout_height="598dp"
+        app:srcCompat="@drawable/intensiv" />
+
+    <Button
+        android:id="@+id/btn_start_intensive_workout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#597380"
+        android:backgroundTintMode="src_in"
+        android:text="Приступить к тренировке"
+        android:textColorLink="#B14444" />
+</LinearLayout>

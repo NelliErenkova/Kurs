@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_back_arrow_maintenance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginBottom="32dp"
+        android:text="← Назад"
+        android:textColor="#3687B7"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_maintenance_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Поддержание формы"
+        android:textColor="#4789AB"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="468dp"
+        android:layout_height="595dp"
+        app:srcCompat="@drawable/podderganie" />
+
+    <Button
+        android:id="@+id/btn_start_maintenance_workout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#2F6FB1"
+        android:backgroundTintMode="src_in"
+        android:text="Приступить к тренировке" />
+</LinearLayout>

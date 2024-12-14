@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Стрелка назад -->
+    <TextView
+        android:id="@+id/tv_back_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginBottom="32dp"
+        android:text="← Назад"
+        android:textColor="#2F79A3"
+        android:textSize="18sp" />
+
+    <!-- Заголовок -->
+    <TextView
+        android:id="@+id/tv_plan_selection_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Выбор тренировочного плана"
+        android:textColor="#3680A8"
+        android:textSize="24sp" />
+
+    <!-- Рекомендация на основе BMI -->
+    <TextView
+        android:id="@+id/tv_recommendation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Поддержание формы -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:srcCompat="@drawable/podderganie"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/tv_maintenance_plan"
+            android:layout_width="379dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:text="Поддержание формы"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </FrameLayout>
+
+    <!-- Похудение -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:srcCompat="@drawable/poxudenie"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/tv_weight_loss_plan"
+            android:layout_width="379dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:text="Похудение"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </FrameLayout>
+
+    <!-- Интенсивные тренировки -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:srcCompat="@drawable/intensiv"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/tv_intensive_plan"
+            android:layout_width="379dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:text="Интенсивные тренировки"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="start"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_back_arrow_weight_loss_exercises"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="← Назад"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp"
+        android:layout_marginBottom="32dp"/>
+
+    <TextView
+        android:id="@+id/tv_weight_loss_exercises_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Похудение"
+        android:textSize="24sp"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Список упражнений для похудения -->
+
+    <VideoView
+        android:id="@+id/videoView1"
+        android:layout_width="75dp"
+        android:layout_height="65dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="39dp"
+        android:text="Бёрпи 60 с" />
+
+    <VideoView
+        android:id="@+id/videoView2"
+        android:layout_width="74dp"
+        android:layout_height="65dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:text="Приседания с прыжком 15 раз" />
+
+    <VideoView
+        android:id="@+id/videoView3"
+        android:layout_width="74dp"
+        android:layout_height="65dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginBottom="24dp"
+        android:text="Присед 20 раз" />
+
+    <VideoView
+        android:id="@+id/videoView4"
+        android:layout_width="75dp"
+        android:layout_height="65dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:text="Скалолаз 20 раз" />
+
+    <VideoView
+        android:id="@+id/videoView5"
+        android:layout_width="75dp"
+        android:layout_height="65dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:text="Бёрпи 60 с" />
+
+    <VideoView
+        android:id="@+id/videoView6"
+        android:layout_width="74dp"
+        android:layout_height="65dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Приседания с прыжком 20 раз" />
+
+    <Button
+        android:id="@+id/btn_finish_weight_loss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Завершить тренировку" />
+</LinearLayout>

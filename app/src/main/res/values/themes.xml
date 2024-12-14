@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Основная тема приложения -->
+    <style name="Theme.FullBuddy" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Цветовая палитра -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorOnSecondary">@android:color/black</item>
+
+        <!-- Цвет статус бара и навигационной панели -->
+        <item name="android:statusBarColor">@color/purple_700</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+
+        <!-- Цвет фона окна -->
+        <item name="android:windowBackground">@android:color/background_light</item>
+
+        <!-- Настройки для компонентов Material -->
+        <!-- Удаляем materialThemeOverlay, чтобы не ссылаться на несуществующий стиль -->
+        <!-- <item name="materialThemeOverlay">@style/ThemeOverlay.MaterialComponents.DayNight</item> -->
+
+        <item name="colorSurface">@android:color/background_light</item>
+        <item name="colorOnSurface">@android:color/black</item>
+        <item name="colorError">@android:color/holo_red_dark</item>
+        <item name="colorOnError">@android:color/white</item>
+
+        <!-- Используем системный шрифт sans-serif -->
+        <item name="android:fontFamily">sans-serif</item>
+
+        <!-- Отключаем ActionBar (у нас NoActionBar, но для верности) -->
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>
