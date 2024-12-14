@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "27544457340",
+    "project_id": "fullbody-1bfea",
+    "storage_bucket": "fullbody-1bfea.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:27544457340:android:f56af67fff6fbe6572f9f9",
+        "android_client_info": {
+          "package_name": "com.example.fullbuddy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLBnoCaU-G4n3i_NdKtTiE96UqrcoK49w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

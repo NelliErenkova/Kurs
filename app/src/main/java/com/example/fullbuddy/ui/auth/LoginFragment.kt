@@ -11,15 +11,15 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.fullbuddy.R
-import com.example.fullbuddy.data.UserDatabaseHelper
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginFragment : Fragment() {
 
-    private lateinit var usernameEditText: EditText
+    private lateinit var emailEditText: EditText
     private lateinit var passwordEditText: EditText
     private lateinit var loginButton: Button
     private lateinit var goToRegisterTextView: TextView
-    private lateinit var dbHelper: UserDatabaseHelper
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,39 +27,37 @@ class LoginFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_login, container, false)
 
-        usernameEditText = view.findViewById(R.id.et_login_username)
+        emailEditText = view.findViewById(R.id.et_login_username)
         passwordEditText = view.findViewById(R.id.et_login_password)
         loginButton = view.findViewById(R.id.btn_login)
         goToRegisterTextView = view.findViewById(R.id.tv_go_to_register)
 
-        dbHelper = UserDatabaseHelper(requireContext())
+        auth = FirebaseAuth.getInstance()
 
         loginButton.setOnClickListener {
-            val username = usernameEditText.text.toString().trim()
+            val email = emailEditText.text.toString().trim()
             val password = passwordEditText.text.toString().trim()
 
-            if (username.isEmpty() || password.isEmpty()) {
+            if (email.isEmpty() || password.isEmpty()) {
                 Toast.makeText(requireContext(), "Заполните все поля", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            val userExists = dbHelper.checkUser(username, password)
-            if (userExists) {
-                Toast.makeText(requireContext(), "Вход успешен!", Toast.LENGTH_SHORT).show()
-                // Переходим к экрану подбора персональной тренировки (создадим позже)
-                findNavController().navigate(R.id.action_loginFragment_to_personalSetupFragment)
-            } else {
-                Toast.makeText(requireContext(), "Неверный логин или пароль", Toast.LENGTH_SHORT).show()
-            }
+            auth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        Toast.makeText(requireContext(), "Вход успешен!", Toast.LENGTH_SHORT).show()
+                        findNavController().navigate(R.id.action_loginFragment_to_personalSetupFragment)
+                    } else {
+                        Toast.makeText(requireContext(), "Ошибка: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                    }
+                }
         }
 
         goToRegisterTextView.setOnClickListener {
-            // Переходим на экран регистрации
             findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
         }
 
         return view
-
     }
-
 }

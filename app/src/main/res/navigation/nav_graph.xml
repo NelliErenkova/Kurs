@@ -3,8 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/registerFragment">
+    app:startDestination="@id/startFragment">
 
+    <!-- StartFragment: Проверяет, авторизован ли пользователь -->
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.fullbuddy.ui.auth.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_startFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_personalSetupFragment"
+            app:destination="@id/personalSetupFragment" />
+    </fragment>
+
+    <!-- RegisterFragment: Регистрация пользователя -->
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.fullbuddy.ui.auth.RegisterFragment"
@@ -15,6 +30,7 @@
             app:destination="@id/loginFragment" />
     </fragment>
 
+    <!-- LoginFragment: Авторизация пользователя -->
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.fullbuddy.ui.auth.LoginFragment"
@@ -28,6 +44,7 @@
             app:destination="@id/personalSetupFragment" />
     </fragment>
 
+    <!-- PersonalSetupFragment: Настройка пользователя -->
     <fragment
         android:id="@+id/personalSetupFragment"
         android:name="com.example.fullbuddy.ui.auth.PersonalSetupFragment"
@@ -38,29 +55,27 @@
             app:destination="@id/planSelectionFragment" />
     </fragment>
 
+    <!-- PlanSelectionFragment: Выбор плана тренировок -->
     <fragment
         android:id="@+id/planSelectionFragment"
         android:name="com.example.fullbuddy.ui.auth.PlanSelectionFragment"
         android:label="fragment_plan_selection"
         tools:layout="@layout/fragment_plan_selection">
-
         <argument
             android:name="bmi"
             app:argType="float" />
-
         <action
             android:id="@+id/action_planSelectionFragment_to_maintenanceTrainingFragment"
             app:destination="@id/maintenanceTrainingFragment" />
-
         <action
             android:id="@+id/action_planSelectionFragment_to_weightLossTrainingFragment"
             app:destination="@id/weightLossTrainingFragment" />
-
         <action
             android:id="@+id/action_planSelectionFragment_to_intensiveTrainingFragment"
             app:destination="@id/intensiveTrainingFragment" />
     </fragment>
 
+    <!-- MaintenanceTrainingFragment: Тренировки для поддержания веса -->
     <fragment
         android:id="@+id/maintenanceTrainingFragment"
         android:name="com.example.fullbuddy.ui.auth.MaintenanceTrainingFragment"
@@ -71,6 +86,7 @@
             app:destination="@id/maintenanceExercisesFragment" />
     </fragment>
 
+    <!-- WeightLossTrainingFragment: Тренировки для похудения -->
     <fragment
         android:id="@+id/weightLossTrainingFragment"
         android:name="com.example.fullbuddy.ui.auth.WeightLossTrainingFragment"
@@ -81,6 +97,7 @@
             app:destination="@id/weightLossExercisesFragment" />
     </fragment>
 
+    <!-- IntensiveTrainingFragment: Интенсивные тренировки -->
     <fragment
         android:id="@+id/intensiveTrainingFragment"
         android:name="com.example.fullbuddy.ui.auth.IntensiveTrainingFragment"
@@ -91,26 +108,7 @@
             app:destination="@id/intensiveExercisesFragment" />
     </fragment>
 
-    <fragment
-        android:id="@+id/weightLossExercisesFragment"
-        android:name="com.example.fullbuddy.ui.auth.WeightLossExercisesFragment"
-        android:label="fragment_weight_loss_exercises"
-        tools:layout="@layout/fragment_weight_loss_exercises">
-        <action
-            android:id="@+id/action_weightLossExercisesFragment_to_finishFragment"
-            app:destination="@id/finishFragment" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/intensiveExercisesFragment"
-        android:name="com.example.fullbuddy.ui.auth.IntensiveExercisesFragment"
-        android:label="fragment_intensive_exercises"
-        tools:layout="@layout/fragment_intensive_exercises">
-        <action
-            android:id="@+id/action_intensiveExercisesFragment_to_finishFragment"
-            app:destination="@id/finishFragment" />
-    </fragment>
-
+    <!-- MaintenanceExercisesFragment: Упражнения для поддержания веса -->
     <fragment
         android:id="@+id/maintenanceExercisesFragment"
         android:name="com.example.fullbuddy.ui.auth.MaintenanceExercisesFragment"
@@ -121,6 +119,29 @@
             app:destination="@id/finishFragment" />
     </fragment>
 
+    <!-- WeightLossExercisesFragment: Упражнения для похудения -->
+    <fragment
+        android:id="@+id/weightLossExercisesFragment"
+        android:name="com.example.fullbuddy.ui.auth.WeightLossExercisesFragment"
+        android:label="fragment_weight_loss_exercises"
+        tools:layout="@layout/fragment_weight_loss_exercises">
+        <action
+            android:id="@+id/action_weightLossExercisesFragment_to_finishFragment"
+            app:destination="@id/finishFragment" />
+    </fragment>
+
+    <!-- IntensiveExercisesFragment: Интенсивные упражнения -->
+    <fragment
+        android:id="@+id/intensiveExercisesFragment"
+        android:name="com.example.fullbuddy.ui.auth.IntensiveExercisesFragment"
+        android:label="fragment_intensive_exercises"
+        tools:layout="@layout/fragment_intensive_exercises">
+        <action
+            android:id="@+id/action_intensiveExercisesFragment_to_finishFragment"
+            app:destination="@id/finishFragment" />
+    </fragment>
+
+    <!-- FinishFragment: Завершение -->
     <fragment
         android:id="@+id/finishFragment"
         android:name="com.example.fullbuddy.ui.auth.FinishFragment"
