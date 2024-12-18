@@ -19,6 +19,12 @@
 
     <!-- Email пользователя -->
     <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ваш логин:" />
+
+    <TextView
         android:id="@+id/tv_user_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,6 +34,12 @@
         android:layout_marginBottom="16dp" />
 
     <!-- Название последней пройденной тренировки -->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Вы прошли  данную тренировку:" />
+
     <TextView
         android:id="@+id/tv_last_training"
         android:layout_width="wrap_content"
