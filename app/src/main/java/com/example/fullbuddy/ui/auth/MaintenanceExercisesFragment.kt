@@ -52,5 +52,13 @@ class MaintenanceExercisesFragment : Fragment() {
             mediaPlayer.isLooping = true
             videoView.start()
         }
+
+        finishButton.setOnClickListener {
+            val bundle = Bundle().apply {
+                putString("trainingName", "Поддержание формы")
+            }
+            findNavController().navigate(R.id.action_maintenanceExercisesFragment_to_finishFragment, bundle)
+        }
+
     }
 }

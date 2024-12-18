@@ -52,5 +52,13 @@ class IntensiveExercisesFragment : Fragment() {
             mediaPlayer.isLooping = true
             videoView.start()
         }
+
+        finishButton.setOnClickListener {
+            val bundle = Bundle().apply {
+                putString("trainingName", "Интенсивные тренировки")
+            }
+            findNavController().navigate(R.id.action_intensiveExercisesFragment_to_finishFragment, bundle)
+        }
+
     }
 }

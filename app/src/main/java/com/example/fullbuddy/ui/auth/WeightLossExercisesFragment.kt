@@ -52,5 +52,13 @@ class WeightLossExercisesFragment : Fragment() {
             mediaPlayer.isLooping = true
             videoView.start()
         }
+
+        finishButton.setOnClickListener {
+            val bundle = Bundle().apply {
+                putString("trainingName", "Похудение")
+            }
+            findNavController().navigate(R.id.action_weightLossExercisesFragment_to_finishFragment, bundle)
+        }
+
     }
 }
